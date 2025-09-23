@@ -1,4 +1,3 @@
-import { DeployButton } from "@/components/deploy-button";
 import { Hero } from "@/components/hero";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import Link from "next/link";
