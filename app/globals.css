@@ -66,3 +66,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  /* Skills Section Styles */
+  .skills-container {
+    @apply flex flex-wrap gap-2 mb-4;
+  }
+  
+  .skill-tag {
+    @apply px-3 py-1 bg-secondary text-secondary-foreground rounded-md text-sm font-medium transition-colors hover:bg-secondary/80;
+  }
+  
+  .skill-tag-primary {
+    @apply px-3 py-1 bg-primary text-primary-foreground rounded-md text-sm font-medium transition-colors hover:bg-primary/90;
+  }
+  
+  .skill-tag-accent {
+    @apply px-3 py-1 bg-accent text-accent-foreground rounded-md text-sm font-medium transition-colors hover:bg-accent/80;
+  }
+  
+  .skill-tag-outline {
+    @apply px-3 py-1 border border-border bg-transparent rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground;
+  }
+}
