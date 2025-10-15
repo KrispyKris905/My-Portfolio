@@ -1,11 +1,12 @@
 "use client";
 import Links from "./PersonalLinks"
 import {ThemeSwitcher} from "@/components/theme-switcher";
+import { HeaderFooterProps } from "@/lib/types"
 
-export default function Footer(props: any){
+export default function Footer({ name }: HeaderFooterProps){
     return(
         <footer>
-            {props.name}
+            {name}
             <Links/>
             <h5 >{"Change Theme: "}<ThemeSwitcher/></h5>
         </footer>
