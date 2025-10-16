@@ -1,4 +1,3 @@
-import { ThemeSwitcher } from "@/components/theme-switcher";
 import { aboutMeContent } from "./content";
 import Link from "next/link";
 

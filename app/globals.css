@@ -4,70 +4,251 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
+    --headerBackground: #4E878C;
+    --bodyBackground1: #93E5AB;
+    --bodyBackground2: #B5FFE1;
+    --footerBackground: #65B891;
+    --foreground: #000000;
+    --popover: 0 0% 0% / 0.8;
+    --popover-foreground: 0 0% 100%;
   }
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --headerBackground: #193F43;
+    --bodyBackground1: #10231A;
+    --bodyBackground2: #18322A;
+    --footerBackground: #1D4E39;
+    --foreground: #ffffff;
+    --popover: 0 0% 0% / 0.8;
+    --popover-foreground: 0 0% 100%;
+  }
+  /* heading tags */
+  h1{
+    font-size: 5rem;
+  }
+  h3{
+    font-size: 3rem;
+  }
+  h5{
+    font-size: 1rem;
+  }
+  /* Partials styling: */
+  header{
+    background: var(--headerBackground);
+    object-fit: contain;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-size: 25px;
+    border-bottom-color: var(--foreground);
+    border-bottom-width: 1px;
+    width: 100vw;
+    height: 80px;
+    min-width: 100vw;
+    max-width: 100vw;
+    min-height: 80px;
+    max-height: 80px;
+    box-sizing: border-box;
+  }
+  nav{
+    display: flex;
+    gap: 5rem;
+  }
+  .active-page {
+    text-decoration: underline;
+  }
+  body {
+  background: var(--bodyBackground1);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  body #alt{
+    background: var(--bodyBackground2);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  footer{
+  background: var(--footerBackground);
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100vw;
+  }
+  footer #links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: auto;
+  }
+  /* Global responsive flex utility for text and image layouts */
+  .responsive-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 2rem; /* Vertical gap on small screens */
+  }
+  /* Styling changes for smaller window or screen size. */
+  @media (min-width: 768px) {
+    .responsive-flex {
+      flex-direction: row;
+      gap: 2rem; /* Horizontal gap on medium screens and up */
+    }
   }
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
-  * {
-    @apply border-border;
+  :root {
+    --headerBackground: #4E878C;
+    --bodyBackground1: #93E5AB;
+    --bodyBackground2: #B5FFE1;
+    --footerBackground: #65B891;
+    --foreground: #000000;
+    --popover: 0 0% 0% / 0.8;
+    --popover-foreground: 0 0% 100%;
+  }
+  .dark {
+    --headerBackground: #193F43;
+    --bodyBackground1: #10231A;
+    --bodyBackground2: #18322A;
+    --footerBackground: #1D4E39;
+    --foreground: #ffffff;
+    --popover: 0 0% 0% / 0.8;
+    --popover-foreground: 0 0% 100%;
+  }
+  /* heading tags */
+  h1{
+    font-size: 5rem;
+  }
+  h3{
+    font-size: 3rem;
+  }
+  h5{
+    font-size: 1rem;
+  }
+  /* Partials styling: */
+  header{
+    background: var(--headerBackground);
+    object-fit: contain;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-size: 25px;
+    border-bottom-color: var(--foreground);
+    border-bottom-width: 1px;
+    width: 100vw;
+    height: 80px;
+    min-width: 100vw;
+    max-width: 100vw;
+    min-height: 80px;
+    max-height: 80px;
+    box-sizing: border-box;
+  }
+  nav{
+    display: flex;
+    gap: 5rem;
+  }
+  .active-page {
+    text-decoration: underline;
   }
   body {
-    @apply bg-background text-foreground;
+  background: var(--bodyBackground1);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  body #alt{
+    background: var(--bodyBackground2);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  footer{
+  background: var(--footerBackground);
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100vw;
+  }
+  footer #links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  /* Global responsive flex utility for text and image layouts */
+  .responsive-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 2rem; /* Vertical gap on small screens */
+  }
+  /* Styling changes for smaller window or screen size. */
+  @media (min-width: 768px) {
+    .responsive-flex {
+      flex-direction: row;
+      gap: 2rem; /* Horizontal gap on medium screens and up */
+    }
   }
 }
 
 @layer components {
+  /* Image Size Classes */
+  
+  .img-small {
+    width: auto;
+    height: 50px;
+    object-fit: cover;
+    font-size: 10px;
+  }
+  
+  .img-medium {
+    width: auto;
+    height: 100px;
+    object-fit: cover;
+    font-size: 10px;
+  }
+  
+  .img-large {
+    width: auto;
+    height: 400px;
+    object-fit: cover;
+    font-size: 10px;
+    border-radius: 2rem;
+  }
+  
+  /* Responsive image classes */
+  .img-responsive {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    object-fit: cover;
+  }
+  
+  .img-thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  
+  /* Aspect ratio preserving images */
+  .img-square {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  
+  .img-rectangle {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
   /* Skills Section Styles */
   .skills-container {
     @apply flex flex-wrap gap-2 mb-4;
@@ -89,3 +270,4 @@
     @apply px-3 py-1 border border-border bg-transparent rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground;
   }
 }
+
