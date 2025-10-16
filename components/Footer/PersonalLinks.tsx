@@ -7,8 +7,6 @@ const imageStyle={
     width: "auto",
     height: "50px",
 }
-//Const only meant for image optimization(lower value will result in lower image quality)
-const imageWxH=100
 
 export default function PersonalLinks(){
     return(
@@ -21,12 +19,12 @@ export default function PersonalLinks(){
                 style={{ cursor: 'pointer' }}
             >
                 <Image
-                    src="/LinkedIn-Logo.png"
+                    src="/linkedIn-logo.png"
                     title="LinkedIn Profile"
-                    width={imageWxH}
-                    height={imageWxH}
+                    width={50}
+                    height={50}
                     alt="LinkedIn-Logo"
-                    style={imageStyle}
+                    className="img-small"
                 />
             </Link>
 
@@ -39,10 +37,10 @@ export default function PersonalLinks(){
             >
                 <Image
                     src="/GitHub-Logo.png"
-                    width={imageWxH}
-                    height={imageWxH}
+                    width={50}
+                    height={50}
                     alt="GitHub-Logo"
-                    style={imageStyle}
+                    className="img-small"
                 />
             </Link>
         </div>

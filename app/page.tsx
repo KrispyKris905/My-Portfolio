@@ -12,11 +12,11 @@ export default function Home() {
             <h3>{"h3 text test"}</h3>
           </div>
           <Image
-            src="/professionalPhoto.jpg"
+            src="/professionalPhoto.JPG"
             width={400}
             height={400}
             alt="Personal headshot"
-            style={{borderRadius:"1rem",}}
+            className="img-large"
           />
         </div>
       </div>
