@@ -2,11 +2,6 @@
 import Image from "next/image"
 import Link from "next/link"
 
-//Const controls actual display size
-const imageStyle={
-    width: "auto",
-    height: "50px",
-}
 
 export default function PersonalLinks(){
     return(
