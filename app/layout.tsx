@@ -38,9 +38,9 @@ export default function RootLayout({
         >
           <Header name={name}/>
 
-          <main className="flex-1">
+            <main className="flex-1 pt-[5px]">
             {children}
-          </main>
+            </main>
 
           <Footer name={name}/>
         </ThemeProvider>

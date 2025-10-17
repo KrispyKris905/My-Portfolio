@@ -122,6 +122,14 @@
     --popover: 0 0% 0% / 0.8;
     --popover-foreground: 0 0% 100%;
   }
+  body {
+  background: var(--bodyBackground1);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  body #alt{
+    background: var(--bodyBackground2);
+  }
   /* heading tags */
   h1{
     font-size: 5rem;
@@ -158,15 +166,13 @@
   .active-page {
     text-decoration: underline;
   }
-  body {
-  background: var(--bodyBackground1);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  }
-  body #alt{
-    background: var(--bodyBackground2);
-    color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
+  /* Updated: Removed horizontal padding to allow the container to extend to screen edges.
+     The container now spans full width, but inner content will be centered via .responsive-flex. */
+  .centered-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   footer{
   background: var(--footerBackground);
@@ -189,6 +195,8 @@
     align-items: center;
     height: auto;
     gap: 2rem; /* Vertical gap on small screens */
+    max-width: 1200px; /* Limit width for readability */
+    margin: 0 auto; /* Center the content horizontally */
   }
   /* Styling changes for smaller window or screen size. */
   @media (min-width: 768px) {

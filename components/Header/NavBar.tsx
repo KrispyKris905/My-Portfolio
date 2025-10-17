@@ -13,8 +13,8 @@ export default function NavBar(){
                 Project List
             </Link>
             <Link
-                href="/about"
-                className={pathname === "/about" ? "active-page" : ""}
+                href="/about-me"
+                className={pathname === "/about-me" ? "active-page" : ""}
             >
                 About Me
             </Link>
