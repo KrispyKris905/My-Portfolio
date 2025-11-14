@@ -19,8 +19,8 @@ export default async function RecentlyPlayedSpotify() {
               height={150}
               className="img-square"
             />
-            <h6>{item.track.name}</h6>
-            <h6>{item.track.artists[0].name}</h6>
+            <p>{item.track.name}</p>
+            <p>{item.track.artists[0].name}</p>
           </div>
         ))}
       </div>
