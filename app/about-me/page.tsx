@@ -23,7 +23,7 @@ export default function AboutMe() {
           <br/><br/>
         </div>
         <Image
-          src="/professionalPhoto.JPG"
+          src="/personalPhoto.jpg"
           width={400}
           height={400}
           alt="Personal headshot"
